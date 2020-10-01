@@ -5,11 +5,11 @@
 <h1>Wishlist</h1>
 <a asp-action="create">Add item</a>
 <ul> 
-    @foreach(WishList.Models.Item i in Model)
+    @foreach(var i in Model)
      {
-        <li @i.Description >
+        <li> i.Description 
             <a asp-action="delete"
-               asp-route-id="@i.Id">delete</a>
+               asp-route-id=i.Id>delete</a>
         </li>
      }
 </ul>
